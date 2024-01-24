@@ -1,0 +1,21 @@
+<fieldset>
+    <legend>Add a location</legend>
+    <h1>Enter a zipcode</h1>
+    <input [formControl]="zipCodeFormControl" type="text">
+    <button (click)="doThing('90210')">Beverly hills</button>
+    <button (click)="doThing('10001')">Somewhere else</button>
+    <button (click)="doThing('33101')">Somewhere different</button>
+</fieldset>
+
+
+@if (data$ | async; as data) {
+
+<fieldset>
+    <legend>{{data.name}}</legend>
+    <ul>
+        <li>{{data.temp}}</li>
+        <li>{{data.max_temp}}</li>
+        <li>{{data.min_temp}}</li>
+    </ul>
+</fieldset>
+}
